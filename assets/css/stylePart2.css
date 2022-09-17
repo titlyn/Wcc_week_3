@@ -26,6 +26,7 @@
     padding: 4px;
 
     background-color: var(--grey);
+    border-radius: 5px;
 
     color: var(--black);
     font-size: 16px;
@@ -38,32 +39,62 @@
 
 .left .mini-card{
     width: 100%;
-}
-
-.left .mini-card .img-container{
-    width: 100%;
-    height: 100%;
-    border: 2px solid red;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .left .mini-card .img-container img{
-    width: auto;
-    height: 100%;
-    display: none;
+    width: 72px;
+    height: 72px;
+
     object-fit: cover;
     -o-object-fit: cover;
+
+    border-radius: 8px;
 }
 
 .left .mini-card .details{
     width: 70%;
+    padding: 4.5px 0 4.5px 10px;
 }
 
-.left .mini-card h1{
+.left .mini-card .details h1{
+    font-size: 16px;
+    margin: 0 auto 3px auto;
+}
+
+.left .mini-card .details .info{
+    font-size: 10px;
     margin: 0 auto 5px auto;
 }
 
-.left .mini-card p{
-    margin: 0 auto 10px auto;
+.left .mini-card .details .info i{
+    font-size: 16px;
+    margin-right: 3px;
+    position: relative;
+}
+
+.left .mini-card .details .info i.star{
+    color: var(--darkOrange);
+    bottom: 1px;
+}
+
+.left .mini-card .details .info i.location{
+    bottom: 2px;
+}
+
+.left .mini-card .details .info .note{
+    margin-right: 10px;
+}
+
+.left .mini-card .price{
+    margin: 0;
+    font-size: 10px;
+}
+
+.left .mini-card .priceNumber{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .left .mini-card button{

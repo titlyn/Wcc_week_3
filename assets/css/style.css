@@ -9,6 +9,8 @@
 :root{
     --black: #292726;
     --grey: #EFEFEF;
+    --darkOrange: #F49338;
+    --white: #F7F5F6;
 }
 
 .flex{
@@ -23,15 +25,17 @@
     width: 100%;
 }
 
-.okine{
-}
-
 body{
+    background-color: var(--white);
     border: 2px solid cyan;
     font-family: okine, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body *{
-    color: var(--black) !important;
+    color: var(--black);
     box-sizing: border-box;
+}
+
+.left{
+    flex-direction: column;
 }
