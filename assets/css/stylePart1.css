@@ -10,11 +10,142 @@ header .nav {
     justify-content: space-between;
 }
 
+header .nav .navleft {
+    display: flex;
+    align-items: center;
+}
+
 header .minititle {
     display: flex;
 }
 
 header .minititle .hov {
-    margin-right: 10px;
+    margin-right: 50px;
+}
+
+header .nav .navleft .menu {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-right: 50px;
+}
+
+header .nav .navleft .menu div {
+    background: #494949;
+    border-radius: 2px;
+    height: 8px;
+    width: 8px;
+    margin-right: 2px;
+    margin-top: 2px;
+}
+
+header .nav .navleft .menu .d2 {
+    background: gray;
+}
+
+header .nav .navleft .Clip {
+    display: flex;
+    margin-right: 50px;
+}
+
+header .nav .navleft .Clip .rect {
+    background: #494949;
+    height: 18px;
+    width: 18px;
+    border-radius: 2px;
+    margin-top: 2px;
+}
+
+header .nav .navleft .Clip .circle {
+    background: gray;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: solid 2px rgb(228, 215, 215);
+    margin-left: -8px;
+    margin-top: -2px;
+}
+
+header .nav .navleft .Pocket img {
+    height: 20px;
+    width: 20px;
+    margin-top: 6px;
+}
+
+header .nav .navleft .Pocket {
+    margin-right: 50px;
+}
+
+header .nav .navleft .Heart img {
+    margin-top: 6px;
+}
+
+header .nav .navright {
+    height: 100px;
+    width: 80px;
+}
+
+header .nav .navright img {
+    height: 100px;
+    width: 80px;
+    border-radius: 2px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search .lefticon {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search .lefticon .ico {
+    margin-right: 20px;
+}
+
+.search .lefticon .text {
+    font-size: 30px;
+}
+
+.search .lefticon img {
+    height: 20px;
+}
+
+.search .righticon .squarre {
+    height: 30px;
+    width: 30px;
+    background: gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search .righticon .squarre .circle1 {
+    background: white;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+}
+
+.cards .result div {
+    margin-right: 30px;
+}
+
+.cards .result {
+    display: flex;
+    align-items: center;
+}
+
+.cards .result .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(206, 205, 205);
+    border-radius: 5px;
+    height: 30px;
+    width: 50px;
 }
 
