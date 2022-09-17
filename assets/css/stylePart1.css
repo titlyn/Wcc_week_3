@@ -32,6 +32,103 @@ header {
     margin-top: 10px;
 }
 
+.navlist div a .menu {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.navlist div a .menu .d2 {
+    background: gray;
+}
+
+.navlist div a .menu div {
+    height: 15px;
+    width: 15px;
+    background: #292726;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+}
+
+.navlist div a .Clip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.navlist div a .Clip .rect {
+    background: #292726;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+}
+
+.navlist div a .Clip .circle {
+    margin-top: -20px;
+    height: 20px;
+    width: 20px;
+    border: solid 3px white;
+    background: gray;
+    border-radius: 50%;
+    margin-left: -18px;
+}
+
+.navlist div a .Pocket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background: #292726;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.navlist div a .Heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.hamb:hover {
+    cursor: pointer;
+}
+
+.navlist {
+    display: none;
+    position: relative;
+    top: 0;
+    left: -100px;
+    width: 50%;
+    bottom: 0;
+    height: 50%;
+}
+
+.show {
+    list-style: none;
+    left:10px;
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.show div {
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .minititle {
     display: flex;
@@ -105,11 +202,15 @@ header {
     padding: 5px;
     justify-content: center;
     background: #F49338;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 75px;
     height: 30px;
     margin-bottom: 10px;
     margin-right: 10px;
+}
+
+.icoleft, .icoright, .icoguest, .icohome, .ico2 {
+    display: none;
 }
 
 
@@ -131,6 +232,10 @@ header {
 
 .buttons .bright {
     display: flex;
+}
+
+.buttons .bright .searching{
+    display: none;
 }
 
 
@@ -274,6 +379,27 @@ header {
         width: 75%;
     }
 
+    .hamb {
+        display: none;
+    }
+
+    .navleft {
+        display: flex;
+        align-items: center;
+    }
+
+    .navlist {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .navlist .div {
+        margin-right: 20px;
+        height: 40px;
+        width: 40px;
+    }
+
     .cards {
         width: 100%;
     }
@@ -283,4 +409,92 @@ header {
         background-color: red;
     }
 
+    #div1 {
+        margin-top: 10px;
+    }
+
+    #search {
+        background: #fff;
+        font-size: 30px;
+        color: #292726;
+    }
+
+    .buttons .bleft {
+        margin-right: 50px;
+        margin-left: -100px;
+    }
+
+    .buttons .bleft .b {
+        display: flex;
+        margin-right: 10px;
+        background: #292726;
+        width: 10rem;
+        height: 40px;
+        justify-content: space-between;
+    }
+
+     .icoright, .icoleft, .ico2{
+        display: flex;
+        background: gray;
+        border-radius: 3px;
+        margin-left: 10px;
+    }
+
+    .icoright {
+        justify-content: flex-end;
+        width: 10px;
+    }
+
+    .icoleft {
+        justify-content: flex-start;
+        width: 10px;
+    }
+
+    .icohome, .icoguest {
+        display: flex;
+    }
+
+    .icoguest img, .icohome img, .icoright img, .icoleft img, .ico2 img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .b .ico2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .b .ico2 .rect {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: gray;
+        height: 20px;
+        width: 20px;
+        border-radius: 5px;
+        margin-left: 2px;
+    }
+
+    .b .ico2 .rect .circle {
+        background: #F7F5F6;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+    }
+
+    .buttons .bright .searching{
+        display: flex;
+        height: 40px;
+        width: 40px;
+        background: #F49338;
+        justify-content: center;
+        border-radius: 8px;
+        align-items: center;
+        margin-right: 10px;
+    }
+    
+    .buttons .bright .searching img {
+        height: 20px;
+        width: 20px;
+    }
 }
