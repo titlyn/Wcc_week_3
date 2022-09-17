@@ -1,0 +1,71 @@
+.left #match-choosing{
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.left #choosing-match-header{
+    flex-direction: row;
+    -ms-flex-direction: row;
+    align-items: center;
+}
+
+.left #choosing-match-header button{
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    height: min-content;
+}
+
+.left #choosing-match-header button *{
+    height: min-content;
+    align-self: center;
+}
+
+.left #choosing-match-header .material-icons.down-arrow{
+    margin-left: 15px;
+    padding: 4px;
+
+    background-color: var(--grey);
+
+    color: var(--black);
+    font-size: 16px;
+}
+
+/* ----------CARDS---------- */
+.left #mini-cards{
+    flex-wrap: wrap;
+}
+
+.left .mini-card{
+    width: 100%;
+}
+
+.left .mini-card .img-container{
+    width: 100%;
+    height: 100%;
+    border: 2px solid red;
+}
+
+.left .mini-card .img-container img{
+    width: auto;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+
+.left .mini-card .details{
+    width: 70%;
+}
+
+.left .mini-card h1{
+    margin: 0 auto 5px auto;
+}
+
+.left .mini-card p{
+    margin: 0 auto 10px auto;
+}
+
+.left .mini-card button{
+    margin-left: auto;
+}

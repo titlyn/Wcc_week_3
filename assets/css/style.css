@@ -1,2 +1,37 @@
 @import url('./stylePart1.css');
 @import url('./stylePart2.css');
+
+@font-face {
+    font-family: 'okine';
+    src: url('../fonts/MADEOkineSansPERSONALUSE-Thin.otf');
+}
+
+:root{
+    --black: #292726;
+    --grey: #EFEFEF;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-items-vCenter{
+    align-items: center;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.okine{
+}
+
+body{
+    border: 2px solid cyan;
+    font-family: okine, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body *{
+    color: var(--black) !important;
+    box-sizing: border-box;
+}
