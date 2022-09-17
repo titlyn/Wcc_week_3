@@ -1,116 +1,80 @@
-header {
-    margin: 5px;
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-header .nav {
+header {
+    padding: 10px;
+    height: 80px;
+}
+
+.nav {
     display: flex;
     align-items: center;
-    background: rgb(228, 215, 215);
-    padding: 20px;
     justify-content: space-between;
 }
 
-header .nav .navleft {
+.navleft {
     display: flex;
     align-items: center;
 }
+.navleft img {
+    height: 30px;
+    width: 30px;
+}
 
-header .minititle {
+.navright img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.minititle {
     display: flex;
+    margin-top: -30px;
 }
 
-header .minititle .hov {
-    margin-right: 50px;
+.minititle .hov {
+    margin-right: 30px;
 }
 
-header .nav .navleft .menu {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-right: 50px;
-}
-
-header .nav .navleft .menu div {
-    background: #494949;
-    border-radius: 2px;
-    height: 8px;
-    width: 8px;
-    margin-right: 2px;
-    margin-top: 2px;
-}
-
-header .nav .navleft .menu .d2 {
-    background: gray;
-}
-
-header .nav .navleft .Clip {
-    display: flex;
-    margin-right: 50px;
-}
-
-header .nav .navleft .Clip .rect {
-    background: #494949;
-    height: 18px;
-    width: 18px;
-    border-radius: 2px;
-    margin-top: 2px;
-}
-
-header .nav .navleft .Clip .circle {
-    background: gray;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    border: solid 2px rgb(228, 215, 215);
-    margin-left: -8px;
-    margin-top: -2px;
-}
-
-header .nav .navleft .Pocket img {
-    height: 20px;
-    width: 20px;
-    margin-top: 6px;
-}
-
-header .nav .navleft .Pocket {
-    margin-right: 50px;
-}
-
-header .nav .navleft .Heart img {
-    margin-top: 6px;
-}
-
-header .nav .navright {
-    height: 100px;
-    width: 80px;
-}
-
-header .nav .navright img {
-    height: 100px;
-    width: 80px;
-    border-radius: 2px;
-}
 .search {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.search .lefticon {
-    margin-right: 20px;
+.idsearch {
+    position: relative;
+}
+
+.search #imgsearch {
     display: flex;
     align-items: center;
+    position: absolute;
+    left: 30px;
+    top: 180px;
 }
 
-.search .lefticon .ico {
-    margin-right: 20px;
-}
-
-.search .lefticon .text {
-    font-size: 30px;
-}
-
-.search .lefticon img {
+#imgsearch img {
+    margin-top: -15px;
     height: 20px;
+    width: 20px;
+}
+
+#search {
+    display: flex;
+    font-size: 12px;
+    width: 195%;
+    background: #f8eee5;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 50px;
+    margin-bottom: 20px;
 }
 
 .search .righticon .squarre {
@@ -123,23 +87,65 @@ header .nav .navright img {
     justify-content: center;
 }
 
-.search .righticon .squarre .circle1 {
-    background: white;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
+.buttons {
+    display: flex;
+    justify-content: center;
 }
 
-.cards .result div {
-    margin-right: 30px;
+.bleft {
+    display: flex;
+    margin-right: 20px;
 }
 
-.cards .result {
+.b {
+    font-size: 14px;
+    color: #F7F5F6;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    background: #F49338;
+    border-radius: 10px;
+    width: 75px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
+.buttons .bright .toggle {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background: #292726;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.buttons .bright .toggle img {
+    height: 20px;
+    width: 20px;
+}
+
+.buttons .bright {
+    display: flex;
+}
+
+
+.result {
     display: flex;
     align-items: center;
 }
 
-.cards .result .number {
+.result div {
+    margin-right: 30px;
+}
+
+
+
+.result .number {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,3 +155,132 @@ header .nav .navright img {
     width: 50px;
 }
 
+.cards {
+    display: flex;
+}
+
+.cards .card {
+    margin: auto 10px 10px 10px;
+    padding: 5px 15px;
+    height: 200px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cards .card img {
+    height: 250px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.cards .texte {
+    background-color: rgb(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    color: white;
+}
+
+.card .texte .bas {
+    display: flex;
+    align-items: center;
+}
+
+.card .texte img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.card .texte .bas .p {
+    margin-right: 10px;
+}
+
+.minifoot {
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.minifoot .leftarrow img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+.minifoot .bar1 {
+    height: 3px;
+    width: 30px;
+    background: rgb(44, 44, 44);
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.minifoot .bar2 {
+    height: 3px;
+    width: 30px;
+    background: gray;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.minifoot .rightarrow img{
+    height: 20px;
+}
+
+
+/*-----main-----*/
+#main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.left {
+    padding: 10px;
+}
+
+
+/*Small devices (portrait tablets and large phones, 550px and up)*/
+@media only screen and (min-width: 550px) {
+    body {
+        background-position-y: 65vh;
+    }
+
+    header {
+        margin-left: 5%;
+        justify-content: center;
+    }
+}
+
+
+/*Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    html, body {
+        height: 100%;
+        min-height: 100%;
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .left {
+        width: 75%;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    .right {
+        width: 25%;
+        background-color: red;
+    }
+
+}
