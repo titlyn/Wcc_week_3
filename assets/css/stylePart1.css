@@ -1,151 +1,283 @@
-header {
-    margin: 5px;
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-header .nav {
+header {
+    padding: 10px;
+    height: 80px;
+}
+
+.nav {
     display: flex;
     align-items: center;
-    background: rgb(228, 215, 215);
-    padding: 20px;
     justify-content: space-between;
 }
 
-header .nav .navleft {
+.navleft {
     display: flex;
     align-items: center;
 }
 
-header .minititle {
-    display: flex;
+.navleft img {
+    height: 30px;
+    width: 30px;
 }
 
-header .minititle .hov {
-    margin-right: 50px;
+.navright img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
-header .nav .navleft .menu {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-right: 50px;
+.minititle .hov {
+    margin-right: 30px;
+    margin-bottom: 20px;
+    text-decoration: none;
 }
 
-header .nav .navleft .menu div {
-    background: #494949;
-    border-radius: 2px;
-    height: 8px;
-    width: 8px;
-    margin-right: 2px;
-    margin-top: 2px;
+.minititle .hov span {
+    margin-bottom: 20px;
 }
 
-header .nav .navleft .menu .d2 {
-    background: gray;
+.minititle .hov hr {
+    width: 40%;
+    border: 1px solid transparent;
+    background-color: var(--darkOrange);
 }
 
-header .nav .navleft .Clip {
-    display: flex;
-    margin-right: 50px;
-}
-
-header .nav .navleft .Clip .rect {
-    background: #494949;
-    height: 18px;
-    width: 18px;
-    border-radius: 2px;
-    margin-top: 2px;
-}
-
-header .nav .navleft .Clip .circle {
-    background: gray;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    border: solid 2px rgb(228, 215, 215);
-    margin-left: -8px;
-    margin-top: -2px;
-}
-
-header .nav .navleft .Pocket img {
-    height: 20px;
-    width: 20px;
-    margin-top: 6px;
-}
-
-header .nav .navleft .Pocket {
-    margin-right: 50px;
-}
-
-header .nav .navleft .Heart img {
-    margin-top: 6px;
-}
-
-header .nav .navright {
-    height: 100px;
-    width: 80px;
-}
-
-header .nav .navright img {
-    height: 100px;
-    width: 80px;
-    border-radius: 2px;
-}
 .search {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    position: relative;
+    margin-bottom: 45px;
 }
 
-.search .lefticon {
-    margin-right: 20px;
+.search #imgsearch {
     display: flex;
-    align-items: center;
+    position: absolute;
+    left: 20px;
 }
 
-.search .lefticon .ico {
-    margin-right: 20px;
-}
-
-.search .lefticon .text {
-    font-size: 30px;
-}
-
-.search .lefticon img {
+#imgsearch img {
     height: 20px;
+    width: 20px;
 }
 
-.search .righticon .squarre {
-    height: 30px;
-    width: 30px;
-    background: gray;
+.search input {
+    font-size: 12px;
+    width: 100%;
+    background: var(--grey);
+    height: 50px;
+    border: none;
     border-radius: 10px;
+    padding-left: 50px;
+}
+
+.buttons {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.search .righticon .squarre .circle1 {
-    background: white;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
+.bleft {
+    display: flex;
+    margin-right: auto;
 }
 
-.cards .result div {
+.btn_text {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: var(--white);
+    border-radius: 8px;
+    padding: 7px 14px;
+    margin-right: 10px;
+}
+
+.btn_text.active {
+    background-color: var(--darkOrange);
+    color: var(--white);
+}
+
+
+.buttons .bright .toggle {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background: #292726;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.buttons .bright .toggle img {
+    height: 20px;
+    width: 20px;
+}
+
+.buttons .bright {
+    display: flex;
+}
+
+
+.result {
+    display: flex;
+    align-items: center;
+}
+
+.result div {
     margin-right: 30px;
 }
 
-.cards .result {
-    display: flex;
-    align-items: center;
+.result h2 {
+    font-weight: 600;
 }
 
-.cards .result .number {
-    display: flex;
+.result span {
+    font-weight: 900 !important;
+}
+
+
+
+.result .number {
+    font-size: 10px;
     justify-content: center;
     align-items: center;
-    background: rgb(206, 205, 205);
+    background: var(--grey);
     border-radius: 5px;
-    height: 30px;
-    width: 50px;
+    padding: 5px 14px;
 }
 
+.cards {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    scroll-padding: 20px;
+    scrollbar-color: var(--black);
+    scrollbar-width: thin;
+}
+
+.cards .card {
+    display: flex;
+    margin: auto 20px auto auto;
+    position: relative;
+}
+
+.cards .card img {
+    width: 220px;
+    height: 157px;
+    border-radius: 10px;
+}
+
+.cards .texte {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(rgb(255, 255, 255, 0.349), rgba(0, 0, 0, 0.349) 63%);
+    background: -o-linear-gradient(rgb(255, 255, 255, 0.349), rgba(0, 0, 0, 0.349) 63%);
+    background: -moz-linear-gradient(rgb(255, 255, 255, 0.349), rgba(0, 0, 0, 0.349) 63%);
+    background: -webkit-linear-gradient(rgb(255, 255, 255, 0.349), rgba(0, 0, 0, 0.349) 63%);
+    position: absolute;
+}
+
+.card .details {
+    align-self: flex-end;
+    padding: 10px;
+}
+
+.card .details * {
+    color: var(--white);
+}
+
+.card .details img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.card .details h1 {
+    font-size: 16px;
+    margin: 0 auto 9px auto;
+}
+
+.card .info {
+    font-size: 11px;
+    margin: 0;
+}
+
+.card .info i {
+    font-size: 16px;
+    margin-right: 3px;
+    position: relative;
+}
+
+.card .note {
+    margin-right: 10px;
+}
+
+.card .details .price {
+    margin-bottom: 9px;
+    font-size: 11px;
+}
+
+.card .priceNumber {
+    font-size: 16px;
+}
+
+.minifoot{
+    display: none;
+}
+
+/*-----main-----*/
+#main {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 5px;
+}
+
+.left {
+    padding: 10px;
+}
+
+
+/*Small devices (portrait tablets and large phones, 550px and up)*/
+@media only screen and (min-width: 550px) {
+    header {
+        justify-content: center;
+    }
+}
+
+
+/*Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    html,
+    body {
+        height: 100%;
+        min-height: 100%;
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .left {
+        width: 75%;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    .right {
+        width: 25%;
+        background-color: red;
+    }
+
+}

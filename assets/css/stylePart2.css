@@ -99,43 +99,43 @@
     padding: 4.5px 0 5px 10px;
 }
 
-.left .mini-card .details h1{
+.details h1{
+    font-weight: 400;
     font-size: 15px;
     margin: 0 auto 5px auto;
 }
 
-.left .mini-card .details .info{
+.info{
     font-size: 9px;
     margin: 0 auto 5px auto;
 }
 
-.left .mini-card .details .info i{
+.info i{
     font-size: 15px;
     margin-right: 3px;
     position: relative;
 }
 
-.left .mini-card .details .info i.star{
+.info i.star{
     color: var(--darkOrange);
     bottom: 1px;
 }
 
-.left .mini-card .details .info i.location{
+.info i.location{
     bottom: 2px;
 }
 
-.left .mini-card .details .info .note{
+.note{
     margin-right: 10px;
 }
 
-.left .mini-card .price{
+.details .price{
     margin: 0;
     font-size: 10px;
 }
 
-.left .mini-card .priceNumber{
+.priceNumber{
     font-size: 16px;
-    font-weight: bold;
 }
 
 .left .mini-card button{

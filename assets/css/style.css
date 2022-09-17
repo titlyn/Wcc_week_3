@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'okine';
-    src: url('../fonts/MADEOkineSansPERSONALUSE-Thin.otf');
+    src: url('../fonts/MADEOkineSansPERSONALUSE-Regular.otf');
 }
 
 :root{
@@ -31,6 +31,7 @@ body{
     background-color: var(--white);
     /* border: 2px solid cyan; */
     font-family: okine, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body *{
