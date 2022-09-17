@@ -1,0 +1,20 @@
+header {
+    margin: 5px;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+    background: rgb(228, 215, 215);
+    padding: 20px;
+    justify-content: space-between;
+}
+
+header .minititle {
+    display: flex;
+}
+
+header .minititle .hov {
+    margin-right: 10px;
+}
+
