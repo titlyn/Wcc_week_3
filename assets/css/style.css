@@ -26,8 +26,10 @@
 }
 
 body{
+    margin: 0;
+    padding: 10px;
     background-color: var(--white);
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
     font-family: okine, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 

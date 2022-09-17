@@ -39,37 +39,78 @@
 
 .left .mini-card{
     width: 100%;
+    overflow: hidden;
+    position: relative;
     align-items: center;
     margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 20px #0000000c;
+}
+
+.left .mini-card::before{
+    content: '';
+    display: flex !important;
+    object-fit: fill;
+    background-image: linear-gradient(to right,#eeb987e7, #eeb987a6, #eeb98756);
+    background-image: -moz-linear-gradient(to right,#eeb987e7, #eeb987a6, #eeb98756);
+    background-image: -o-linear-gradient(to right,#eeb987e7, #eeb987a6, #eeb98756);
+    background-image: -webkit-linear-gradient(to right,#eeb987e7, #eeb987a6, #eeb98756);
+    height: 100%;
+    width: 0%;
+    transition: width cubic-bezier(0.075, 0.82, 0.165, 1) 600ms;
+    margin-right: auto;
+    border-top-right-radius: 10% 50%;
+    border-bottom-right-radius: 10% 50%;
+    position: absolute;
+}
+
+.left .mini-card:hover::before{
+    width: 110%;
+}
+
+.left .mini-card .img-container, .left .mini-card .details, .left .mini-card button{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    z-index: 1000;
+}
+
+.left .mini-card .img-container{
+    margin-left: 8px;
+}
+
+.left .mini-card button{
+    margin-right: 8px;
+}
+
+.left .mini-card .img-container, .left .mini-card .img-container img{
+    width: 75px;
+    height: 75px;
+    
+    object-fit: cover;
+    -o-object-fit: cover;
 }
 
 .left .mini-card .img-container img{
-    width: 72px;
-    height: 72px;
-
-    object-fit: cover;
-    -o-object-fit: cover;
-
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .left .mini-card .details{
     width: 70%;
-    padding: 4.5px 0 4.5px 10px;
+    padding: 4.5px 0 5px 10px;
 }
 
 .left .mini-card .details h1{
-    font-size: 16px;
-    margin: 0 auto 3px auto;
+    font-size: 15px;
+    margin: 0 auto 5px auto;
 }
 
 .left .mini-card .details .info{
-    font-size: 10px;
+    font-size: 9px;
     margin: 0 auto 5px auto;
 }
 
 .left .mini-card .details .info i{
-    font-size: 16px;
+    font-size: 15px;
     margin-right: 3px;
     position: relative;
 }
@@ -98,5 +139,16 @@
 }
 
 .left .mini-card button{
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
     margin-left: auto;
+    border: none;
+    background-color: rgba(244, 147, 56, 0.2);
+}
+
+.left .mini-card button i{
+    font-size: 16px;
+    font-weight: lighter;
+    color: var(--darkOrange);
 }
