@@ -71,7 +71,7 @@
 .left .mini-card .img-container, .left .mini-card .details, .left .mini-card button{
     margin-top: 8px;
     margin-bottom: 8px;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .left .mini-card .img-container{
