@@ -42,3 +42,8 @@ body *{
 .left{
     flex-direction: column;
 }
+
+.left, .right{
+    display: flex;
+    flex: 1 !important;
+}

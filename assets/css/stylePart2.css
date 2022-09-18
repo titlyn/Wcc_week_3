@@ -152,3 +152,112 @@
     font-weight: lighter;
     color: var(--darkOrange);
 }
+
+.right{
+    position: relative;
+}
+
+.right .onMap{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapCard{
+    width: 230px;
+    padding: 8px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-sizing: border-box;
+} 
+
+.mapCard h1{
+    font-size: 18px !important;
+}
+
+.mapCard .note{
+    margin-right: 5px;
+}
+
+.mapCard .details .info *, .mapCard button *{
+    font-size: 12px !important;
+} 
+
+.mapCardImgCtnr{
+    box-sizing: border-box;
+    width: 218px;
+    height: 150;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.mapCardImgCtnr img{
+    width: 100%;
+    height: 100%;
+}
+
+.mapCard .details{
+    margin: 20px auto;
+}
+
+.mapCard .info{
+    margin-top: 10px;
+}
+
+.mapCard button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 8px;
+    background-color: var(--black);
+    border: none;
+}
+
+.mapCard button *{
+    font-weight: 600;
+    color: var(--white);
+}
+
+.mapCard button i{
+    margin-left: 3px;
+    position: relative;
+        top: 1px;
+}
+
+.mini-card button:hover i, .mapCard button:hover i{
+    position: relative;
+    animation: test 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes test{
+    0% {left: 0px}
+    50% {left: 5px}
+    100% { left: 0px}
+}
+
+.cirleBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(163, 163, 163, 0.664);
+    /* background-color: red; */
+}
+
+.cirleBtn div{
+    z-index: 1000;
+    width: min-content;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.527)
+}
