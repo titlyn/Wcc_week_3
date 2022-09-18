@@ -14,11 +14,40 @@
                 <header>
                     <div class="nav">
                         <div class="navleft">
-                            <img src="./assets/Icons/Vectormen.svg" alt="">
-                        </div>
-
-                        <div class="navright">
-                            <img src="./images/women.jpg" alt="woman">
+                            <div class="hamb">
+                                <div class="hamburgerContainer" onclick="openNav()">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+                                <div id="mySidepanel" class="sidepanel">
+                                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                                    <a href="#">
+                                        <div class="home">
+                                            <div></div>
+                                            <div class="d2"></div>
+                                            <div class="d2"></div>
+                                            <div></div>
+                                        </div>
+                                        <span>Home</span>
+                                    </a>
+                                    <a href="#" class="active">
+                                        <div class="Pocket">
+                                            <img src="./assets/Icons/pocket.svg" alt="">
+                                        </div>
+                                        <span>Pocket</span>
+                                    </a>
+                                    <a href="#">
+                                        <div class="Heart">
+                                            <img src="./assets/Icons/heart.svg" alt="">
+                                        </div>
+                                        <span>Likes</span>
+                                    </a>
+                                </div>
+                                <div class="navright">
+                                    <img src="./images/women.jpg" alt="woman">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -26,7 +55,7 @@
 
                 <div id="main">
                     <div class="minititle flex">
-                        <a href="#" class="hov">
+                        <a href="#" class="hov active">
                             <span>Book a Hotel</span>
                             <hr>
                         </a>
@@ -35,7 +64,7 @@
                             <hr>
                         </a>
                     </div>
-                
+
                     <div class="search">
                         <input type="text" placeholder="City of Moab Utah">
                         <div id="imgsearch"><img src="./assets/Icons/search.svg" alt=""></div>
@@ -43,14 +72,53 @@
 
                     <div class="buttons">
                         <div class="bleft">
-                            <a href="#" class="btn_text active">Check in</a>
-                            <a href="#" class="btn_text">Check out</a>
-                            <a href="#" class="btn_text">Guests</a>
-                            <a href="#" class="btn_text">Rooms</a>
+                            <a href="#" class="btn_text active">
+                                <img src="./assets/Icons/right.svg" alt="">
+                                <span>
+                                    Check in
+                                </span>
+                                <img src="./assets/Icons/down.svg" class="rightImg flex" alt="">
+                            </a>
+                            <a href="#" class="btn_text">
+                                <img src="./assets/Icons/left.svg" alt="">
+                                <span>
+                                    Check out
+                                </span>
+                                <img src="./assets/Icons/down.svg" class="rightImg flex" alt="">
+                            </a>
+                            <a href="#" class="btn_text">
+                                <img src="./assets/Icons/guest.svg" alt="">
+                                <span>
+                                    Guests
+                                </span>
+                                <div class="ico2">
+                                    <div class="rect">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="rect">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="btn_text">
+                                <img src="./assets/Icons/home.svg" alt="">
+                                <span>
+                                    Rooms
+                                </span>
+                                <div class="ico2">
+                                    <div class="rect">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="rect">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="bright">
                             <div class="toggle"><img src="./assets/Icons/toggle.svg" alt=""></div>
+                            <div class="searching"><img src="./assets/Icons/searching.svg" alt=""></div>
                         </div>
                     </div>
 
@@ -60,7 +128,7 @@
                         </div>
 
                         <div class="number flex">
-                           34
+                            34
                         </div>
                     </div>
 
@@ -84,7 +152,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="card">
                                 <img src="./images/bord.jpg" alt="">
                                 <div class="texte flex">
@@ -102,7 +170,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="card">
                                 <img src="./images/camp.jpg" alt="">
                                 <div class="texte flex">
@@ -122,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                
+
 
                     <div class="minifoot">
                         <div class="leftarrow"><img src="./assets/Icons/leftarrowigray.svg" alt=""></div>
@@ -235,6 +303,8 @@
 
             </div>
         </div>
+
+        <script src="./assets/js/index.js"></script>
     </body>
 
 </html>

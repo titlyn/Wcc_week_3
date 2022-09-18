@@ -7,7 +7,6 @@ body {
 
 header {
     padding: 10px;
-    height: 80px;
 }
 
 .nav {
@@ -18,19 +17,209 @@ header {
 
 .navleft {
     display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navleft .hamburgerContainer {
+    display: inline-block;
+    padding-top: 5px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.sidepanel {
+    width: 0%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.863);
+    overflow-x: hidden;
+    transition: ease-in 0.2s;
+    height: 100%;
+}
+
+.sidepanel.show {
+    width: 100%;
+    max-width: 600px;
+    padding: 32px;
+    padding-top: 60px;
+    transition: ease-in 0.2s;
+}
+
+.sidepanel a {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    display: flex;
+    justify-self: center;
+    margin: auto;
+    flex-direction: row;
+    padding: 8px 20px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.5s;
+}
+
+.sidepanel a.active {
+    background-color: var(--black);
+}
+
+.sidepanel a.active span,
+.sidepanel a:hover span {
+    color: var(--grey);
+}
+
+.sidepanel a span {
+    color: #766E66;
+    display: flex;
+    margin: auto;
+}
+
+.sidepanel a:hover {
+    background-color: var(--darkOrange);
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    width: min-content !important;
+    min-width: min-content !important;
+    padding: 8px !important;
+    margin-left: 80%;
+    color: var(--white);
+    font-size: 36px;
+}
+
+.sidepanel .closebtn:hover {
+    background-color: transparent;
+    transform: scale(1.5);
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.navlist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navleft .hamb {
+    display: flex;
+    width: 100%;
+}
+
+.home,
+.Pocket,
+.Heart {
+    width: 20px;
+    height: min-content;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 14px 14px;
+}
+
+/* .home .d2 {
+    background: rgba(201, 197, 194, 1);
+} */
+
+.home div {
+    height: 10px;
+    width: 10px;
+    background: #766E66;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+}
+
+.navlist div a .Clip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.navlist div a .Clip .rect {
+    background: var(--black);
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+}
+
+.navlist div a .Clip .circle {
+    margin-top: -20px;
+    height: 20px;
+    width: 20px;
+    border: solid 3px white;
+    background: rgba(119, 117, 116, 1);
+    ;
+    border-radius: 50%;
+    margin-left: -18px;
+}
+
+.navlist div a .Pocket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.navlist div a .Heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.hamb:hover {
+    cursor: pointer;
+}
+
+
+.show div {
+    margin-right: 10px;
+    justify-content: center;
     align-items: center;
 }
 
-.navleft img {
-    height: 30px;
-    width: 30px;
-}
-
 .navright img {
+    display: flex;
+    align-self: center;
     height: 50px;
     width: 50px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-top: 10px;
 }
 
 .minititle .hov {
@@ -39,14 +228,26 @@ header {
     text-decoration: none;
 }
 
+.minititle .hov hr{
+    width: 0%;
+    border: 1px solid transparent;
+}
+
+.minititle .hov *{
+    transition: all 0.5s;
+}
+
 .minititle .hov span {
     margin-bottom: 20px;
 }
 
-.minititle .hov hr {
+.minititle .hov.active hr, .minititle .hov:hover hr {
     width: 40%;
-    border: 1px solid transparent;
     background-color: var(--darkOrange);
+}
+
+.minititle .hov:hover span{
+    color: var(--darkOrange);
 }
 
 .search {
@@ -85,6 +286,8 @@ header {
 .bleft {
     display: flex;
     margin-right: auto;
+    flex-wrap: wrap;
+    align-content: space-around;
 }
 
 .btn_text {
@@ -94,13 +297,22 @@ header {
     text-decoration: none;
     background: var(--white);
     border-radius: 8px;
-    padding: 7px 14px;
+    padding: 10px;
     margin-right: 10px;
 }
 
 .btn_text.active {
     background-color: var(--darkOrange);
+
+}
+
+.btn_text.active span {
     color: var(--white);
+}
+
+.btn_text img,
+.btn_text .ico2 {
+    display: none;
 }
 
 
@@ -108,7 +320,7 @@ header {
     display: flex;
     height: 40px;
     width: 40px;
-    background: #292726;
+    background: var(--black);
     justify-content: center;
     border-radius: 8px;
     align-items: center;
@@ -122,6 +334,10 @@ header {
 
 .buttons .bright {
     display: flex;
+}
+
+.buttons .bright .searching {
+    display: none;
 }
 
 
@@ -229,7 +445,7 @@ header {
     font-size: 16px;
 }
 
-.minifoot{
+.minifoot {
     display: none;
 }
 
@@ -250,6 +466,12 @@ header {
     header {
         justify-content: center;
     }
+
+    .cards .card img {
+        width: 337px;
+        height: 180px;
+        object-fit: cover;
+    }
 }
 
 
@@ -258,9 +480,8 @@ header {
 
     html,
     body {
-        height: 100%;
-        min-height: 100%;
         position: relative;
+        border: 2px solid red;
     }
 
     .container {
@@ -269,6 +490,100 @@ header {
 
     .left {
         width: 75%;
+    }
+
+    .hamburgerContainer {
+        display: none !important;
+    }
+
+    .closebtn {
+        display: none !important
+    }
+
+    header,
+    .hamb,
+    .nav,
+    .navleft,
+    .sidepanel {
+        overflow: visible !important;
+    }
+
+    .sidepanel {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        position: relative;
+        background-color: transparent;
+    }
+
+    .sidepanel a span {
+        display: none;
+    }
+
+    .sidepanel a {
+        width: min-content;
+        margin: unset;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .sidepanel a:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    .sidepanel a:hover .home div {
+        background-color: var(--white);
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        10% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+        }
+
+        20% {
+            transform: translate(-3px, 0px) rotate(1deg);
+        }
+
+        30% {
+            transform: translate(3px, 2px) rotate(0deg);
+        }
+
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(1px, -2px) rotate(-1deg);
+        }
+    }
+
+    .bleft{
+        flex-wrap: nowrap;
     }
 
     .cards {
@@ -280,4 +595,112 @@ header {
         background-color: red;
     }
 
+    #div1 {
+        margin-top: 10px;
+    }
+
+    #search {
+        background: #fff;
+        font-size: 30px;
+        color: var(--black);
+    }
+
+    .bleft {
+        width: 100%;
+    }
+
+    .bright {
+        margin-left: auto;
+        width: 100px;
+        height: 40px;
+    }
+
+    .bleft .btn_text {
+        display: flex;
+        margin-right: 10px;
+        background: var(--black);
+        width: 25%;
+        height: 40px;
+        justify-content: space-between;
+    }
+
+    .bleft .btn_text * {
+        display: flex;
+    }
+
+    .ico2 {
+        display: flex;
+        border-radius: 3px;
+        margin-left: auto;
+    }
+
+    .btn_text img {
+        height: 17px;
+        width: 17px;
+    }
+
+    .btn_text span {
+        width: 100%;
+        margin-left: 15px;
+        position: relative;
+        top: 2px;
+        color: var(--white);
+    }
+
+    .rightImg,
+    .ico2 .rect {
+        box-sizing: content-box;
+        height: 12px !important;
+        width: 12px !important;
+        padding: 4px;
+        background: rgba(119, 117, 116, 1);
+        ;
+    }
+
+    .ico2,
+    .rightImg {
+        display: none !important;
+        justify-content: space-between;
+    }
+
+    .ico2 .rect {
+        display: flex;
+        background: rgba(119, 117, 116, 1);
+        margin-left: 5px;
+        border-radius: 5px;
+    }
+
+    .ico2 .rect .circle {
+        display: flex;
+        align-self: center;
+        margin: auto;
+        background: #F7F5F6;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+    }
+
+    .buttons .bright .searching {
+        display: flex;
+        height: 40px;
+        width: 40px;
+        background: #F49338;
+        justify-content: center;
+        border-radius: 8px;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .buttons .bright .searching img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .ico2,
+    .rightImg {
+        display: flex !important;
+    }
 }
