@@ -460,6 +460,8 @@ header {
     padding: 10px;
 }
 
+.right{display: none};
+
 
 /*Small devices (portrait tablets and large phones, 550px and up)*/
 @media only screen and (min-width: 550px) {
@@ -591,6 +593,7 @@ header {
     }
 
     .right {
+display: flex;
         width: 30%;
     }
 
